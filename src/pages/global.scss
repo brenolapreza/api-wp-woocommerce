@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+//variaveis
+$voll-color-light: #00A59B;
+@mixin flex-justify-center {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+@mixin flex-align-center {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
