@@ -26,16 +26,23 @@ class Tabela extends React.Component {
         const processando = this.state.products.filter( processando => processando.status === "processing" )
         const totalProcessando = processando.length
 
+        let somar = this.state.products.map((acumulado) => parseFloat(acumulado.total))
+        const result = somar.reduce((soma, nota) => soma + nota, 0);
+        
+
+
+
         return (
             <div className="container">
                 <h1>DASHBOARD</h1>
                 <ul>
-                    <li>Total de Pedidos: {this.state.products.length}</li>
+                    <li className="">Total de Pedidos: {this.state.products.length}</li>
                     <li>Total de Pedidos Devolvidos: {devolvidosTotal}</li>
                     <li>Total de Pedidos Cancelados: {totalCancelado}</li>
                     <li>Total de Pedidos Processando: {totalProcessando}</li>
-
-                </ul>
+                    <li>Resultado: R${result}</li>
+                 
+                                   </ul>
             </div>
         );
     }
