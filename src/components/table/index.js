@@ -8,7 +8,7 @@ class Tabela extends React.Component {
     };
 
     componentDidMount() {
-        fetch('https://vollpilates.com.br/wp-json/wc/v2/orders?consumer_key=ck_9dd3ba58c6c5120ceb1de771d08038055da2cb27&consumer_secret=cs_a0bb9ce335fe159a9f9c30c7ebe079ace00bb55e')
+        fetch('https://vollpilates.com.br/wp-json/wc/v2/orders?per_page=100&consumer_key=ck_9dd3ba58c6c5120ceb1de771d08038055da2cb27&consumer_secret=cs_a0bb9ce335fe159a9f9c30c7ebe079ace00bb55e')
             .then(res => res.json())
             .then(res => {
                 this.setState({
