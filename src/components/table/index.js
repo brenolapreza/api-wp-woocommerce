@@ -34,7 +34,7 @@ class Tabela extends React.Component {
 
            
 
-        
+
         return (
             <div>
                 <ul>
@@ -43,7 +43,7 @@ class Tabela extends React.Component {
                     <li>QUANT. - PROCESSANDO: {totalProcessando}</li>
                     <li>QUANT. - PENDENTE: {totalPendente}</li>
                     <li>QUANT. - CANCELADO {totalCancelado}</li>
-                    <li>QUANT. - REEBOLSADO: {totalDevolvidos}</li>
+                    <li>QUANT. - REEMBOLSADO: {totalDevolvidos}</li>
                 </ul>
             </div>
         );
