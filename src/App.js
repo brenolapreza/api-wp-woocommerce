@@ -1,12 +1,11 @@
 import React from 'react';
-import Tabela from './components/table';
+import Module from './pages/module';
 
 function App() {
   return (
     <div className="App">
       <>
-        <h1>DASHBOARD</h1>
-        <Tabela/>
+        <Module/>
       </>
     </div>
   );

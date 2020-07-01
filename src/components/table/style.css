@@ -1,1 +1,12 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+ul {
+  list-style: none;
+}
+
+ul li {
+  padding: 10px;
+  border: 1px solid #000;
+  position: relative;
+  width: 400px;
+  font-size: 20px;
+}
+/*# sourceMappingURL=style.css.map */

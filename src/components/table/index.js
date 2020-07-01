@@ -18,7 +18,13 @@ class Tabela extends React.Component {
     }
     render() {
         const devolvidos = this.state.products.filter( devolvidos => devolvidos.status === "refunded" )
-        const devolvidosTotal = devolvidos.length
+        const totalDevolvidos = devolvidos.length
+
+        const concluido = this.state.products.filter( devolvidos => devolvidos.status === "completed" )
+        const totalConcluidos = concluido.length
+
+        const pendente = this.state.products.filter( devolvidos => devolvidos.status === "pending" )
+        const totalPendente = pendente.length
 
         const cancelado = this.state.products.filter( cancelado => cancelado.status === "cancelled" )
         const totalCancelado = cancelado.length
@@ -26,23 +32,18 @@ class Tabela extends React.Component {
         const processando = this.state.products.filter( processando => processando.status === "processing" )
         const totalProcessando = processando.length
 
-        let somar = this.state.products.map((acumulado) => parseFloat(acumulado.total))
-        const result = somar.reduce((soma, nota) => soma + nota, 0);
-        
-
-
+           
 
         return (
-            <div className="container">
-                <h1>DASHBOARD</h1>
+            <div>
                 <ul>
-                    <li className="">Total de Pedidos: {this.state.products.length}</li>
-                    <li>Total de Pedidos Devolvidos: {devolvidosTotal}</li>
-                    <li>Total de Pedidos Cancelados: {totalCancelado}</li>
-                    <li>Total de Pedidos Processando: {totalProcessando}</li>
-                    <li>Resultado: R${result}</li>
-                 
-                                   </ul>
+                    <li><strong>TOTAL DE PEDIDOS: {this.state.products.length}</strong></li>
+                    <li>QUANT. - CONCLUIDO: {totalConcluidos}</li>
+                    <li>QUANT. - PROCESSANDO: {totalProcessando}</li>
+                    <li>QUANT. - PENDENTE: {totalPendente}</li>
+                    <li>QUANT. - CANCELADO {totalCancelado}</li>
+                    <li>QUANT. - REEBOLSADO: {totalDevolvidos}</li>
+                </ul>
             </div>
         );
     }

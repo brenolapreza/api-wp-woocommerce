@@ -1,23 +1,11 @@
-@import '../../pages/global.scss';
 
 ul{
     list-style: none;
     li{
-        padding: 20px;
-        margin: 20px;
+        padding: 10px;
         border: 1px solid #000;
         position: relative;
-        width: 600px;
+        width: 400px;
         font-size: 20px;
-        @include flex-align-center;
-    }
-    ::after{
-        content: " ";
-        position: absolute;
-        border-radius: 50%;
-        width: 15px;
-        height: 15px;
-        background-color: rgb(42, 202, 135);
-        right: 50px;
     }
 }
