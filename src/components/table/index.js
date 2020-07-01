@@ -8,7 +8,7 @@ class Tabela extends React.Component {
     };
 
     componentDidMount() {
-        fetch('https://grupovoll.com.br/cursos/wp-json/wc/v2/orders?consumer_key=ck_f9466a8e9c810380f732988207228cf3d554b2c0&consumer_secret=cs_a110ccf629c42d9b7b70fcb5a73d8978c71f9415')
+        fetch('https://vollpilates.com.br/wp-json/wc/v2/orders?consumer_key=ck_9dd3ba58c6c5120ceb1de771d08038055da2cb27&consumer_secret=cs_a0bb9ce335fe159a9f9c30c7ebe079ace00bb55e')
             .then(res => res.json())
             .then(res => {
                 this.setState({
@@ -32,7 +32,10 @@ class Tabela extends React.Component {
         const processando = this.state.products.filter( processando => processando.status === "processing" )
         const totalProcessando = processando.length
 
-           
+        const hold = this.state.products.filter( processando => processando.status === "on-hold" )
+        const totalhold = hold.length
+
+        
 
 
         return (
@@ -41,6 +44,7 @@ class Tabela extends React.Component {
                     <li><strong>TOTAL DE PEDIDOS: {this.state.products.length}</strong></li>
                     <li>QUANT. - CONCLUIDO: {totalConcluidos}</li>
                     <li>QUANT. - PROCESSANDO: {totalProcessando}</li>
+                    <li>QUANT. - PROCESSANDO: {totalhold}</li>
                     <li>QUANT. - PENDENTE: {totalPendente}</li>
                     <li>QUANT. - CANCELADO {totalCancelado}</li>
                     <li>QUANT. - REEMBOLSADO: {totalDevolvidos}</li>
