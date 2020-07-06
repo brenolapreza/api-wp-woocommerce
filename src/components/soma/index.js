@@ -8,7 +8,7 @@ class Soma extends React.Component {
     };
 
     componentDidMount() {
-        fetch('https://vollpilates.com.br/wp-json/wc/v2/orders?per_page=100&consumer_key=ck_9dd3ba58c6c5120ceb1de771d08038055da2cb27&consumer_secret=cs_a0bb9ce335fe159a9f9c30c7ebe079ace00bb55e')
+        fetch('https://vollpilates.com.br/wp-json/wc/v1/orders?filter[posts_per_page]=-1&consumer_key=ck_9dd3ba58c6c5120ceb1de771d08038055da2cb27&consumer_secret=cs_a0bb9ce335fe159a9f9c30c7ebe079ace00bb55e')
             .then(res => res.json())
             .then(res => {
                 this.setState({
@@ -24,34 +24,34 @@ class Soma extends React.Component {
 
         const refund = this.state.products.filter(valor => valor.status === "refunded")
         const refundMap = refund.map(refundNumber => parseFloat(refundNumber.total))
-        const refundResult = refundMap.reduce((first, second) => first + second ,0)
+        const refundResult = refundMap.reduce((first, second) => first + second, 0)
         const refundFixed = refundResult.toFixed(2)
 
         const complet = this.state.products.filter(valor => valor.status === "completed")
         const completMap = complet.map(completNumber => parseFloat(completNumber.total))
-        const completResult = completMap.reduce((first, second) => first + second ,0)
+        const completResult = completMap.reduce((first, second) => first + second, 0)
         const completFixed = completResult.toFixed(2)
 
         const pending = this.state.products.filter(valor => valor.status === "pending")
         const pendingMap = pending.map(pendingNumber => parseFloat(pendingNumber.total))
-        const pendingResult = pendingMap.reduce((first, second) => first + second ,0)
+        const pendingResult = pendingMap.reduce((first, second) => first + second, 0)
         const pendingFixed = pendingResult.toFixed(2)
 
         const cancel = this.state.products.filter(valor => valor.status === "cancelled")
         const cancelMap = cancel.map(cancelNumber => parseFloat(cancelNumber.total))
-        const cancelResult = cancelMap.reduce((first, second) => first + second ,0)
+        const cancelResult = cancelMap.reduce((first, second) => first + second, 0)
         const cancelFixed = cancelResult.toFixed(2)
 
         const process = this.state.products.filter(valor => valor.status === "processing")
         const processMap = process.map(processNumber => parseFloat(processNumber.total))
-        const processResult = processMap.reduce((first, second) => first + second ,0)
+        const processResult = processMap.reduce((first, second) => first + second, 0)
         const processFixed = processResult.toFixed(2)
 
         const hold = this.state.products.filter(valor => valor.status === "on-hold")
         const holdMap = hold.map(holdNumber => parseFloat(holdNumber.total))
-        const holdResult = holdMap.reduce((first, second) => first + second ,0)
+        const holdResult = holdMap.reduce((first, second) => first + second, 0)
         const holdFixed = holdResult.toFixed(2)
-        
+
         return (
             <div>
                 <ul>
@@ -62,6 +62,7 @@ class Soma extends React.Component {
                     <li>QUANT. - PENDENTE: R${pendingFixed}</li>
                     <li>QUANT. - CANCELADO: R${cancelFixed}</li>
                     <li>QUANT. - REEMBOLSADO: R${refundFixed}</li>
+                    {console.log(this.state.products)}
                 </ul>
             </div>
         );
