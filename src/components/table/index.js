@@ -44,7 +44,7 @@ class Tabela extends React.Component {
                     <li><strong>TOTAL DE PEDIDOS: {this.state.products.length}</strong></li>
                     <li>QUANT. - CONCLUIDO: {totalConcluidos}</li>
                     <li>QUANT. - PROCESSANDO: {totalProcessando}</li>
-                    <li>QUANT. - PROCESSANDO: {totalhold}</li>
+                    <li>QUANT. - EM ESPERA: {totalhold}</li>
                     <li>QUANT. - PENDENTE: {totalPendente}</li>
                     <li>QUANT. - CANCELADO {totalCancelado}</li>
                     <li>QUANT. - REEMBOLSADO: {totalDevolvidos}</li>
