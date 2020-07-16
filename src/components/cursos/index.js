@@ -42,7 +42,7 @@ class Curso extends React.Component {
                     <table>
                         <thead>
                             <th>Nome do Curso</th>
-                            <th>Quantidade Vendido</th>
+                            <th>Quantidade Vendidos</th>
                         </thead>
                         <tbody>
                             <td>
