@@ -1,11 +1,13 @@
 import React from 'react';
-import Module from './pages/module';
+import Curso from './components/cursos'
+
 
 function App() {
   return (
     <div className="App">
       <>
-        <Module/>
+        <Curso/>
+
       </>
     </div>
   );

@@ -986,3 +986,4 @@
 [0617/220027.533:ERROR:minidumpwritedump_with_crashpad_info.cc(435)] Failed to call MiniDumpWriteDump: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x8007012B)
 [0617/220027.533:ERROR:minidumpwritedump_with_crashpad_info.cc(592)] Failed to write minidump file
 [0617/220027.533:ERROR:crash_report_exception_handler.cc(132)] TryMiniDumpWriteDumpWithCrashpadInfo failed
+[0713/113130.015:ERROR:file_io.cc(89)] ReadExactly: expected 36, observed 0

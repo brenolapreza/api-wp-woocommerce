@@ -56,13 +56,13 @@ class Soma extends React.Component {
         return (
             <div>
                 <ul>
-                    <li><strong>VALOR TOTAL: R${resultFixed}</strong></li>
-                    <li>QUANT. - CONCLUIDO: R${completFixed}</li>
-                    <li>QUANT. - PROCESSANDO: R${processFixed}</li>
-                    <li>QUANT. - EM ESPERA: R${holdFixed}</li>
-                    <li>QUANT. - PENDENTE: R${pendingFixed}</li>
-                    <li>QUANT. - CANCELADO: R${cancelFixed}</li>
-                    <li>QUANT. - REEMBOLSADO: R${refundFixed}</li>
+                    <li><strong>VALOR TOTAL: R$ {resultFixed}</strong></li>
+                    <li>QUANT. - CONCLUIDO: R$ {completFixed}</li>
+                    <li>QUANT. - PROCESSANDO: R$ {processFixed}</li>
+                    <li>QUANT. - EM ESPERA: R$ {holdFixed}</li>
+                    <li>QUANT. - PENDENTE: R$ {pendingFixed}</li>
+                    <li>QUANT. - CANCELADO: R$ {cancelFixed}</li>
+                    <li>QUANT. - REEMBOLSADO: R$ {refundFixed}</li>
                     {console.log(this.state.products)}
                 </ul>
             </div>
